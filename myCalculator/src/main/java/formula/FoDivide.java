@@ -6,20 +6,19 @@ public class FoDivide implements IFoTwoVariable {
 
 	@Override
 	public double execute(double x, double y) {
-		
+
 		int intX = (int) x;
 		int intY = (int) y;
 		if (intX == x && intY == y) {
 			try {
-			System.out.println("The quotient is:\t" + getQuotient(intX, intY));
-			System.out.println("The remainder is:\t" + getRemainder(intX, intY));
-			}
-			catch(Exception e){
+				System.out.println("The quotient is:\t" + getQuotient(intX, intY));
+				System.out.println("The remainder is:\t" + getRemainder(intX, intY));
+			} catch (Exception e) {
 				System.out.println("You cannot divide by zero!");
 			}
 		}
-		
-		return x/y;
+
+		return x / y;
 	}
 
 	public int getQuotient(int x, int y) throws Exception {
@@ -40,7 +39,7 @@ public class FoDivide implements IFoTwoVariable {
 			while (x >= y) {
 				x = (int) foSubtract.execute(x, y);
 			}
-		return x;
+			return x;
 		} else {
 			throw new Exception("DivisionByZeroNotAllowed");
 		}

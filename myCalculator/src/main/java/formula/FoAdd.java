@@ -1,16 +1,16 @@
 package formula;
 
-public class FoAdd extends FoDefault{
-	
+public class FoAdd extends FoDefault {
+
 	FoSubtract foSubtract = new FoSubtract();
 	FoNegative foNegative = new FoNegative();
 
 	@Override
 	public double execute(double x, double y) {
-		if(y < 0) {
-			return foSubtract.execute(x, foNegative.execute(y)); 
+		if (y < 0) {
+			return foSubtract.execute(x, foNegative.execute(y));
 		}
-		for (int i = 0; i < y; i++) {
+		for (int i = 1; i < y; i++) {
 			x++;
 		}
 		return x;

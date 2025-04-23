@@ -3,8 +3,6 @@ package calculator;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.InputMismatchException;
-import java.util.Scanner;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -37,12 +35,10 @@ public class CalculatorUI implements ActionListener {
 	CalculatorUI() {
 		frame = new JFrame("Calculator");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//		frame.setSize(420, 550);
 		frame.setSize(470, 550);
 		frame.setLayout(null);
 
 		textField = new JTextField();
-//		textField.setBounds(50, 25, 300, 50);
 		textField.setBounds(50, 25, 350, 50);
 		textField.setEditable(false);
 
@@ -87,8 +83,6 @@ public class CalculatorUI implements ActionListener {
 		clrB.setBounds(205, 430, 145, 50);
 
 		panel = new JPanel();
-//		panel.setBounds(50, 100, 300, 300);
-//		panel.setLayout(new GridLayout(4, 4, 10, 10));
 		panel.setBounds(50, 100, 350, 300);
 		panel.setLayout(new GridLayout(4, 5, 10, 10));
 
